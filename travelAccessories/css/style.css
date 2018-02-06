@@ -181,7 +181,10 @@ textarea {
     box-sizing: border-box;
 }
 
-html {}
+
+/*---------------------------------------------------------------------------
+Customization basic elements
+---------------------------------------------------------------------------*/
 
 html,
 body {
@@ -228,25 +231,308 @@ input[type="email"] {
 Fonts
 ---------------------------------------------------------------------------*/
 
+@font-face {
+    font-family: 'RuachLet';
+    src: url('../fonts/RuachLetPlain.eot');
+    src: url("../fonts/RuachLetPlain.eot?#iefix") format('embedded-opentype'), url("../fonts/RuachLetPlain.woff2") format('woff2'), url("../fonts/RuachLetPlain.woff") format('woff'), url("../fonts/RuachLetPlain.ttf") format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
 
 /*---------------------------------------------------------------------------
 Wrapper
 ---------------------------------------------------------------------------*/
+
+.layout {
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+
+/* used over 12 times */
+
+.wrapper:before,
+.wrapper:after {
+    content: "";
+    display: table;
+}
+
+.wrapper:after {
+    clear: both;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+}
 
 
 /*---------------------------------------------------------------------------
 Block title
 ---------------------------------------------------------------------------*/
 
+.block-title {
+    position: relative;
+}
+
 
 /*---------------------------------------------------------------------------
 Adaptive header
 ---------------------------------------------------------------------------*/
 
+.adaptive-menu-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 75%;
+    height: 100%;
+    z-index: 100;
+    background: #f3f3f3;
+    padding: 30px 15px;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+.adaptive-menu-container.adaptive-menu-container--open {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.adaptive-menu__item {
+    margin: 0 0 30px 0;
+}
+
+.adaptive-menu__item:last-child {
+    margin: 0;
+}
+
+.adaptive-menu__link {
+    color: #59666d;
+    font-size: 28px;
+}
+
+.adaptive-menu__link:hover,
+.adaptive-menu__link--active {
+    color: #c1272c;
+    text-decoration: none;
+}
+
+.adaptive-menu-toggle {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 30px;
+    height: 25px;
+    z-index: 2;
+    margin: -13px 0 0 0;
+}
+
+.menu-toggle-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.menu-toggle-line {
+    position: absolute;
+    background: #38474f;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    display: block;
+    margin: auto;
+    height: 5px;
+    width: 100%;
+}
+
+.menu-toggle-line--1 {
+    top: 0;
+    -webkit-transition: width 0.2s ease 0.4s;
+    -o-transition: width 0.2s ease 0.4s;
+    transition: width 0.2s ease 0.4s;
+}
+
+.menu-toggle-line--2 {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-transition: width 0.2s ease 0.3s;
+    -o-transition: width 0.2s ease 0.3s;
+    transition: width 0.2s ease 0.3s;
+}
+
+.menu-toggle-line--3 {
+    bottom: 0;
+    -webkit-transition: width 0.2s ease 0.3s;
+    -o-transition: width 0.2s ease 0.3s;
+    transition: width 0.2s ease 0.3s;
+}
+
+.menu-toggle-line--4,
+.menu-toggle-line--5 {
+    opacity: 0;
+    top: 10px;
+}
+
+.menu-toggle-line--4 {
+    -webkit-transition: opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease 0.2s;
+    transition: opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease 0.2s;
+    -o-transition: opacity 0.2s ease 0.2s, -o-transform 0.2s ease 0.2s;
+    -moz-transition: opacity 0.2s ease 0.2s, transform 0.2s ease 0.2s, -moz-transform 0.2s ease 0.2s;
+}
+
+.menu-toggle-line--5 {
+    -webkit-transition: opacity 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
+    transition: opacity 0.2s ease 0s, -webkit-transform 0.2s ease 0s;
+    -o-transition: opacity 0.2s ease 0s, -o-transform 0.2s ease 0s;
+    -moz-transition: opacity 0.2s ease 0s, transform 0.2s ease 0s, -moz-transform 0.2s ease 0s;
+}
+
+.adaptive-menu-toggle--open .menu-toggle-line {
+    background: #c2272d;
+}
+
+.adaptive-menu-toggle--open .menu-toggle-line--1 {
+    width: 0;
+    -webkit-transition: width 0.2s ease 0s;
+    -o-transition: width 0.2s ease 0s;
+    transition: width 0.2s ease 0s;
+}
+
+.adaptive-menu-toggle--open .menu-toggle-line--2 {
+    width: 0;
+    -webkit-transition: width 0.2s ease 0.1s;
+    -o-transition: width 0.2s ease 0.1s;
+    transition: width 0.2s ease 0.1s;
+}
+
+.adaptive-menu-toggle--open .menu-toggle-line--3 {
+    width: 0;
+    -webkit-transition: width 0.2s ease 0.2s;
+    -o-transition: width 0.2s ease 0.2s;
+    transition: width 0.2s ease 0.2s;
+}
+
+
+.adaptive-menu-toggle--open .menu-toggle-line--4 {
+    opacity: 1;
+    -webkit-transform: rotate(45deg) translateZ(0);
+    -ms-transform: rotate(45deg) translateZ(0);
+    -o-transform: rotate(45deg) translateZ(0);
+    transform: rotate(45deg) translateZ(0);
+    -webkit-transition: opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease 0.2s;
+    transition: opacity 0.2s ease 0.2s, -webkit-transform 0.2s ease 0.2s;
+    -o-transition: opacity 0.2s ease 0.2s, -o-transform 0.2s ease 0.2s;
+    -moz-transitoin:opacity 0.2s ease 0.2s, transform 0.2s ease 0.2s;
+}
+
+.adaptive-menu-toggle--open .menu-toggle-line--5 {
+    opacity: 1;
+    -webkit-transform: rotate(-45deg) translateZ(0);
+    -ms-transform: rotate(-45deg) translateZ(0);
+    -o-transform: rotate(-45deg) translateZ(0);
+    transform: rotate(-45deg) translateZ(0);
+    -webkit-transition: opacity 0.2s ease 0.4s, -webkit-transform 0.2s ease 0.4s;
+    transition: opacity 0.2s ease 0.4s, -webkit-transform 0.2s ease 0.4s;
+    -o-transition: opacity 0.2s ease 0.4s, -o-transform 0.2s ease 0.4s;
+    -moz-transition: opacity 0.2s ease 0.4s, -moz-transform 0.2s ease 0.4s;
+    
+
+}
+
+
 
 /*---------------------------------------------------------------------------
 Header
 ---------------------------------------------------------------------------*/
+
+.header {
+    position: relative;
+    padding: 23px 0;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: rgba(230, 230, 230, 0.8);
+    letter-spacing: -10px;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    -webkit-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.2);
+}
+
+.header--scrolled {
+    padding: 10px 0;
+    background: rgba(230, 230, 230, 0.95);
+}
+
+.header-logo,
+.header-menu {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header-logo {
+    width: 20%;
+    letter-spacing: 0;
+}
+
+.header-menu {
+    width: 80%;
+    text-align: right;
+}
+
+.header-menu__item {
+    display: inline-block;
+    margin: 0 0 0 25px;
+    letter-spacing: 0;
+}
+
+.header-menu__item:first-child {
+    margin: 0;
+}
+
+.header-menu__link {
+    color: #59666d;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header-menu__link--active,
+.header-menu__link:hover {
+    color: #c1272c;
+    text-decoration: none;
+}
 
 
 /*---------------------------------------------------------------------------
@@ -312,3 +598,30 @@ Modal
 /*---------------------------------------------------------------------------
 Adaptive styles
 ---------------------------------------------------------------------------*/
+
+@media only screen and (max-width: 1300px) {}
+
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 1000px) {
+    .header {
+        height: auto;
+    }
+    .header-menu {
+        display: none;
+    }
+    .header-logo {
+        width: 100%;
+        padding: 0 40px;
+        text-align: center;
+    }
+    .adaptive-menu-toggle {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 767px) {}
+
+@media only screen and (max-width: 640px) {}
+
+@media only screen and (max-width: 480px) {}
