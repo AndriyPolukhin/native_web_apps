@@ -4,7 +4,7 @@ $(document).ready(function() {
     // ==========================================================
 
     $('.adaptive-manu-toggle').on('click', function(e) {
-        e.preventDefatul();
+        e.preventDefault();
         $(this).toggleClass('adaptive-menu-toggle--open');
         $('.adaptive-menu-container').toggleClass('adaptive-menu-container--open');
     });
@@ -18,7 +18,7 @@ $(document).ready(function() {
         $(this).addClass('header-menu__link--active');
     });
 
-    // Add active class to header adaptive menu af.click
+    // Add active class to header adaptive menu after click
     // ==========================================================
 
     $('.adaptive-menu__link').on('click', function(e) {
@@ -41,12 +41,30 @@ $(document).ready(function() {
     // Scroll to target button
     // ==========================================================
 
+    $('.js-scrollto').on('click', function(e) {
+        e.preventDefault();
+        var target = $(this).data('target');
+        if(target) {
+            $('html, body').animate({scrollTop: $('#' + target).offset().top - 80}, 400);
+        }
+    });
+
+
     // Fancybox config
     // ==========================================================
 
     // Perfect slider init
     // ==========================================================
 
+    if($('.perfect-slider').length) {
+        $('.perfect-slider').owlCarousel({
+            loop: true,
+            items: 1,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+        });
+    }
     // Review slider init
     // ==========================================================
 
