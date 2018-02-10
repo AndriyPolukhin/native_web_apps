@@ -53,6 +53,12 @@ $(document).ready(function() {
     // Fancybox config
     // ==========================================================
 
+    $('[data-fancybox-modal]').fancybox({
+        trapFocus: true,
+        autoFocus: false,
+        touch:false,
+    });
+
     // Perfect slider init
     // ==========================================================
 
@@ -67,10 +73,68 @@ $(document).ready(function() {
     }
     // Review slider init
     // ==========================================================
-
+    /*
+    if($('.reviews-slider').length) {
+        $('.reviews-slider').owlCarousel({
+            loop: true,
+            item: 3,
+            nav: true,
+            dots: false,
+            center: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: fales,
+                    dots: true,
+                },
+                640: {
+                    items: 1,
+                    nav: false,
+                    dots: true,
+                },
+                700: {
+                    items: 2,
+                    center: false,
+                    margin: 15,
+                    nav: false,
+                },
+                1000: {
+                    items; 3,
+                },
+            },
+        });
+    }
+    */
     // Review modal
     // ==========================================================
+/*
+    $(document).on('click', '.js-review-modal', function(e) {
+        e.preventDefault();
+        var review_text = $(this)
+            .parents('.reviews-slider__item')
+            .find('.reviews-slider-text--formodal').text(),
+            review_name = $(this)
+            .parents('.reviews-slider__item')
+            .find('.reviews-slider__name').text(),
+            review_avatar = $(this)
+            .parents('.reviews-slider__item')
+            .find('.reviews-slider__avatar').html(),
+            review_rating = $(this)
+            .parents('.reviews-slider__item')
+            .find('.reviews-slider__rating').html(),
+            review_photos = $(this)
+            .parents('.reviews-slider__item')
+            .find('.reviews-slider__photos').html();
 
+            $('.review-modal__text').text(review_text);
+            $('.review-modal__name').text(review_name);
+            $('.review-modal__rating').html(review_rating);
+            $('.review-modal__avatar').html(review_avatar);
+            $('.review-modal__photolist').html('');
+            $('.review-modal__photolist').html(review_photos);
+    
+    });
+*/
     // Buy array: psd, color, quantity, link
     // ==========================================================
     
