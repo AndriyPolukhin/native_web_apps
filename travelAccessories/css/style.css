@@ -863,7 +863,6 @@ Easy
     background-position: center top;
     background-repeat: no-repeat;
     position: relative;
-    
 }
 
 .block-title--easy {
@@ -1016,7 +1015,6 @@ Easy
     right: -31px;
 }
 
-
 .watch-video {
     text-align: right;
     margin: 150px 62px 0 0;
@@ -1059,14 +1057,13 @@ Easy
     background: #424242;
 }
 
+
 /*---------------------------------------------------------------------------
 Best price
 ---------------------------------------------------------------------------*/
 
-
 .best-price .container {
     background: #f8f9fb;
-    
 }
 
 .best-price-content {
@@ -1139,10 +1136,9 @@ Best price
 
 .best-price__btn:hover {
     background: #fff;
-    color:#bc0d0d;
+    color: #bc0d0d;
     text-decoration: none;
 }
-
 
 .best-price-image {
     width: 45%;
@@ -1152,6 +1148,7 @@ Best price
 /*---------------------------------------------------------------------------
 Inside
 ---------------------------------------------------------------------------*/
+
 .inside {
     padding: 50px 0 0;
 }
@@ -1171,7 +1168,7 @@ Inside
 .block-title--inside {
     display: inline-block;
     vertical-align: middle;
-    width:65%;
+    width: 65%;
     letter-spacing: 0;
 }
 
@@ -1220,7 +1217,45 @@ Inside
 /*---------------------------------------------------------------------------
 Reviews
 ---------------------------------------------------------------------------*/
-    
+
+#reviews {
+    padding: 15px 0 0 0;
+}
+
+.reviews {
+    padding: 150px 0 50px;
+    background: url(../images/reviews-bg.jpg) center top no-repeat;
+    height: 946px;
+}
+
+.block-title--reivews {
+    margin: 0 0 10px 0;
+    text-align: right;
+}
+
+.reviews-slider.owl-carousel .owl-item.center .reviews-slider__item {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 0.4s linear 0s;
+    -o-transition: all 0.4s linear 0s;
+    transition: all 0.4s linear 0s;
+}
+
+.reviews-slider__item {
+    position: relative;
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
+    transform: scale(0.7);
+    -webkit-transition: all 0.4s linear 0s;
+    -o-transition: all 0.4s linear 0s;
+    transition: all 0.4s linear 0s;
+}
+
+
+
 
 /*---------------------------------------------------------------------------
 Buy
@@ -1264,19 +1299,137 @@ Footer
 /*---------------------------------------------------------------------------
 Modal
 ---------------------------------------------------------------------------*/
- 
+
+.modal {
+    display: none;
+    width: 90%;
+}
+
+.modal--review {
+    max-width: 1030px;
+    padding: 30px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -ms-border-radius: 14px;
+    -o-border-radius: 14px;
+    border-radius: 14px;
+}
+
+.review-modal__content {
+    margin: 0 0 35px 0;
+    position: relative;
+    padding: 40px 75px;
+    background: #e5e5e5;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border-radius: 30px;
+}
+
+.review-modal__content:before {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    content: "";
+    background: url(../images/i/i-quotes-grey-s.png) no-repeat;
+    width: 45px;
+    height: 28px;
+}
+
+.review-modal__content:after {
+    position: absolute;
+    left: 50%;
+    bottom: -16px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 16px 9px 0 9px;
+    border-color: #e5e5e5 transparent transparent transparent;
+    margin: 0 0 0 -8px;
+    -webkit-transition: all 0.4s linear 0s;
+    -o-transition: all 0.4s linear 0s;
+    transition: all 0.4s linear 0s;
+}
+
+.review-modal__text {
+    color: #393939;
+    font-size: 15px;
+    line-height: 23px;
+}
+
+.review-modal__content-bottom {
+    margin: 30px 0 0 0;
+    letter-spacing: -10px;
+}
+
+.review-modal__photolist {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80%;
+    padding: 0 10px 0 0;
+}
+
+.reviews-slider__photo-item {
+    margin: 0 0 5px 0;
+    padding: 0 5px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10%;
+    height: 80px;
+}
+
+.review-modal__photolist .reviews-slider__photo {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: block;
+}
+
+.review-modal__rating {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20%;
+    text-align: right;
+    letter-spacing: 0;
+}
+
+.review-modal__avatar {
+    margin: 0 0 14px 0;
+    text-align: center;
+}
+
+.review-modal__avatar img {
+    width: 84px;
+    height: 84px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.review-modal__name {
+    color: #484848;
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 
 /*---------------------------------------------------------------------------
 Adaptive styles
 ---------------------------------------------------------------------------*/
 
 @media only screen and (max-width: 1300px) {
-
     .easy-img-1 {
         width: 35%;
         top: -50px;
     }
-
     .easy-img-2 img {
         max-width: 60%;
     }
@@ -1286,16 +1439,13 @@ Adaptive styles
     .hero-description p {
         font-size: 26px;
     }
-
     .easy-img-2 {
         display: none;
     }
-
     .watch-video {
         padding: 70px 0;
         position: relative;
     }
-
     .watch-video__img {
         display: block;
         position: absolute;
@@ -1308,7 +1458,6 @@ Adaptive styles
         -o-transform: translateY(-50%);
         transform: translateY(-50%);
     }
-
     .perfect-slider__item-img {
         display: block;
         position: absolute;
@@ -1331,35 +1480,28 @@ Adaptive styles
     .perfect-slider__item-title {
         font-size: 36px;
     }
-
     .easy-item {
         margin: 0 20px 0 0;
     }
-
     .easy-list--bottom {
         margin: 0;
         text-align: center;
     }
-
     .easy-list--bottom .easy-item {
         width: 33.3333%;
         padding: 0 15px;
         margin: 0;
     }
-
     .best-price-content {
         min-height: auto;
     }
-
     .best-price-left,
     .best-price-image {
         width: 50%;
     }
-
     .best-price-left {
         padding: 0 15px 0 0;
     }
-
     .best-price-image {
         padding: 0 0 0 15px;
     }
@@ -1380,7 +1522,6 @@ Adaptive styles
     .adaptive-menu-toggle {
         display: block;
     }
-
     .hero-buy {
         margin: 20px 0 0 0;
     }
@@ -1404,88 +1545,70 @@ Adaptive styles
         margin: 0 10px 0 0;
         position: static;
     }
-
     .block-title--perfect .block-title--gradient {
         margin: 0 10px 0 0;
     }
-
     .perfect-description {
         width: 100%;
         text-align: center;
     }
-
     .perfect-description p {
         font-size: 18px;
         line-height: 24px;
     }
-
     .perfect-description-img {
         margin: 30px 0 0 0;
         display: block;
     }
-
     .perfect-description-icons {
         margin: 30px 0 0 0;
     }
-
     .perfect-image {
         display: none;
     }
-
     .perfect-slider-container {
         margin: 0;
         padding: 50px 0;
         background: transparent;
     }
-
     .perfect-slider__item {
         min-height: auto;
         margin: 0;
         padding: 50px 0 0 0;
     }
-
     .perfect-slider__item-title {
         font-size: 32px;
     }
-
     .perfect-slider__item-title {
         text-align: right;
     }
-
     .easy {
         margin: 0;
     }
-
     .easy-img-1 {
         top: -100px;
     }
-
     .easy-container {
         padding: 0 0 50px 0;
         background-image: none;
     }
-
     .watch-video__link:after {
         background: transparent;
         width: 0;
     }
-
     .watch-video__link {
         margin: 0 0 0 80px;
         font-size: 30px;
     }
-
     .block-title--easy {
         margin: 0 0 110px 0;
     }
-
     .block-title--easy .block-title--gradient {
         display: block;
         font-size: 150px;
         line-height: 150px;
         text-align: center;
     }
-
     .block-title--easyto {
         position: static;
         font-size: 55px;
@@ -1494,7 +1617,6 @@ Adaptive styles
         display: block;
         text-align: center;
     }
-
     .block-title--easyemploy {
         margin: 0;
         display: block;
@@ -1502,7 +1624,6 @@ Adaptive styles
         line-height: 55px;
         text-align: center;
     }
-
     .easy-item {
         width: 33.3333%;
         padding: 0 15px;
@@ -1512,39 +1633,32 @@ Adaptive styles
     .best-price__value {
         font-size: 36px;
     }
-
     .best-price__btn {
         padding: 20px;
         width: 100%;
     }
-
     .block-title--inside {
         display: block;
         width: 100%;
     }
-
     .inside-title__more {
         margin: 0 0 10px 0;
         text-align: center;
     }
-
     .block-title--inside .block-title--gradient {
         display: block;
         width: 1005;
         text-align: center;
         white-space: normal;
     }
-
     .block-title--less {
         text-align: center;
         margin: 10px 0 0;
         white-space: normal;
     }
-
     .inside__content-img {
         display: none;
     }
-
     .inside-list {
         margin: 30px 0 0 0;
     }
@@ -1568,30 +1682,26 @@ Adaptive styles
         -o-border-radius: 5px;
         border-radius: 5px;
     }
-
     .hero {
         height: auto;
         padding: 125px 0 0 0;
         background: #fff;
     }
-
     .hero-bag {
         width: 100%;
         float: none;
-        text-align :right;
+        text-align: right;
     }
     .hero-bag-label {
         left: 15px;
     }
-
     .hero-description {
         margin: 0;
         width: 100%;
         float: none;
         z-index: 2;
-        position: relative; 
+        position: relative;
     }
-
     .hero-bag__img {
         display: inline-block;
         margin: 30px 0 0 0;
@@ -1599,7 +1709,6 @@ Adaptive styles
     .hero-buy {
         margin: 5px 0 0 0;
     }
-
     .block-title--perfect .block-title--gradient,
     .block-title--perfectsubtext,
     .block-title--additional {
@@ -1607,41 +1716,32 @@ Adaptive styles
         display: block;
         text-align: center;
     }
-
     .block-title--perfectsubtext {
         margin: 0;
         font-size: 30px;
         line-height: 1;
     }
-
     .easy-container {
         padding: 30px 0 0 0;
     }
-
     .easy-img-1 {
         display: none;
     }
-
     .easy-img__title {
         font-size: 18px;
         line-height: 24px;
     }
-
     .watch-video {
         margin: 0;
         padding: 30px 0;
         text-align: center;
     }
-
     .watch-video__img {
         display: none;
     }
-
-
     .best-price .container {
         padding: 30px 0 0 0;
     }
-
     .best-price-left,
     .best-price-image {
         width: 100%;
@@ -1649,11 +1749,9 @@ Adaptive styles
         padding: 0;
         text-align: center;
     }
-
     .best-price-left {
         margin: 0 0 30px 0;
     }
-
     .block-title--less,
     .block-title__more {
         font-size: 40px;
@@ -1666,16 +1764,13 @@ Adaptive styles
         width: 150px;
         height: 150px;
     }
-
     .hero-bag-label__title {
         margin: 0 0 15px 0;
         font-size: 20px;
     }
-
     .hero-bag-label__price {
         font-size: 36px;
     }
-
     .hero-bag__img img {
         max-width: 80%;
     }
@@ -1687,23 +1782,18 @@ Adaptive styles
         font-size: 30px;
         line-height: 1;
     }
-
     .perfect-slider__item-img--3 {
         text-align: center;
     }
-
     .perfect-slider__item-img--3 img {
         max-width: 60%;
     }
-
     .perfect-slider__item-ico--desktop {
         display: none;
     }
-
     .perfect-slider__item-ico-adaptive {
         display: block;
     }
-
     .perfect-slider__item-img {
         margin: 0 0 30px 0;
         float: none;
@@ -1716,14 +1806,12 @@ Adaptive styles
         transform: translateY(0);
         text-align: center;
     }
-
     .perfect-slider__item-content {
         letter-spacing: -10px;
         width: 100%;
         float: none;
         text-align: center;
     }
-
     .perfect-slider__item-block {
         letter-spacing: 0;
         display: inline-block;
@@ -1731,13 +1819,11 @@ Adaptive styles
         width: 50%;
         padding: 0 7px;
     }
-
     .perfect-slider__item-title,
     .perfect-slider__item-title--right,
     .perfect-slider__item-ico {
         text-align: center;
     }
-
     .perfect-slider__item-title {
         min-height: 80px;
         font-family: 'Open Sans', sans-serif;
@@ -1747,34 +1833,27 @@ Adaptive styles
     .perfect-slider.owl-carousel .owl-dots {
         margin: 20px 0 0 0;
     }
-
     .block-title--easy {
         margin: 0 0 40px 0;
     }
-
     .block-title--easy .block-title--gradient {
         font-size: 50px;
         line-height: 1.2;
     }
-
     .easy-list--top {
         margin: 0;
     }
-
     .easy-list--desktop {
         display: none;
     }
-
     .easy-list--mobile {
         display: block;
     }
-
     .easy-item {
         margin: 0 0 40px 0;
         padding: 0 7px;
         width: 50%;
     }
-
     .easy-item__title,
     .easy-list--bottom .easy-item__title {
         margin: 0 0 15px 0;
@@ -1782,30 +1861,22 @@ Adaptive styles
         font-size: 14px;
         line-height: 20px;
     }
-
     .easy-list--mobile .easy-item:first-child .easy-item__title,
     .easy-list--mobile .easy-item:nth-child(2) .easy-item__title {
         min-height: 61px;
     }
-
     .easy-list--mobile .easy-item:nth-child(3) .easy-item__title,
     .easy-list--mobile .easy-item:nth-child(4) .easy-item__title {
         min-height: 41px;
     }
-
     .easy-item__ico {
         display: none;
     }
-
     .block-title--easyto,
     .block-title--easyemploy {
         font-size: 40px;
         line-height: 40px;
     }
-
-    
-
-
 }
 
 @media only screen and (max-width: 480px) {
@@ -1813,12 +1884,10 @@ Adaptive styles
         font-size: 28px;
         line-height: 1;
     }
-
     .hero-buy__btn {
         width: 100%;
         padding: 0 10px;
     }
-
     .hero-buy__btn {
         height: auto;
         padding: 20px 5px;
@@ -1826,6 +1895,4 @@ Adaptive styles
         width: 100%;
         text-align: center;
     }
-
-
 }

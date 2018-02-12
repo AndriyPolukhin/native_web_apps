@@ -73,7 +73,7 @@ $(document).ready(function() {
     }
     // Review slider init
     // ==========================================================
-    /*
+
     if($('.reviews-slider').length) {
         $('.reviews-slider').owlCarousel({
             loop: true,
@@ -104,10 +104,10 @@ $(document).ready(function() {
             },
         });
     }
-    */
+
     // Review modal
     // ==========================================================
-/*
+
     $(document).on('click', '.js-review-modal', function(e) {
         e.preventDefault();
         var review_text = $(this)
@@ -134,7 +134,7 @@ $(document).ready(function() {
             $('.review-modal__photolist').html(review_photos);
     
     });
-*/
+
     // Buy array: psd, color, quantity, link
     // ==========================================================
     
