@@ -1406,7 +1406,118 @@ Reviews
 /*---------------------------------------------------------------------------
 Buy
 ---------------------------------------------------------------------------*/
+.buy {
+    padding: 55px 0 0;
+}
 
+.block-title--buy {
+    margin: 0 0 75px 0;
+}
+
+.block-title--travelcubes {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-size: 98px;
+    line-height: 150px;
+    color: #424242;
+    font-weight: bold;
+}
+
+.block-title--your {
+    position: absolute;
+    left: 216px;
+    top: 60px;
+    font-size: 150px;
+    line-height: 150px;
+    color:#eeeeee;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.buy-images {
+    float: right;
+}
+
+.buy-filter {
+    float: left;
+}
+
+.buy-filter__row {
+    margin: 0 0 35px 0;
+}
+
+.buy-filter__row:last-child {
+    margin: 0;
+}
+
+.buy-filter__col {
+    float: left;
+    width: 50%;
+}
+
+.buy-filter__row-title {
+    margin: 0 0 14px 0;
+    color: #424242;
+    font-size: 24px;
+}
+
+.buy-filter-number {
+    letter-spacing: -10px;
+}
+
+.buy-filter-number__btn {
+    display: inline-block;
+    width: 55px;
+    height: 50px;
+    margin: 0 10px 0 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid #c7c7c7;
+    color: #424242;
+    font-size: 22px;
+    line-height: 44px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+
+.buy-filter-number__btn:last-child {
+    margin: 0;
+}
+
+.buy-filter-psc__btn:hover,
+.buy-filter-psc__btn--active,
+.buy-filter-quantity__btn:hover,
+.buy-filter-quantity__btn--active {
+    background: #eaeaea;
+    color:#bcbbbc;
+    text-decoration: none;
+}
+
+
+.buy-filter-color__btn {
+    display: inline-block;
+    width: 54px;
+    margin: 0 8px 0 0;
+    position: relative;
+}
+
+.buy-filter-color__btn--active:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    margin: auto;
+    background: url(../images/i/i-checkmark.png) no-repeat;
+    width: 20px;
+    height: 18px;
+}
 
 /*---------------------------------------------------------------------------
 Contacts
